@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://use.fontawesome.com/208c7f3b93.js"></script>
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Abel|Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="resources/css/style.css" type="text/css"/>
+</head>
+<body>
+<div class="main_body">
+    <div class="welcome_area active">
+        <div class="header">
+            <a href="" class="logout_btn" onclick="logout(event)"><i class="fa fa-power-off" aria-hidden="true"></i></a>
+
+            <div class="welcome_note">
+                <div class="welcome_txt">Hello</div>
+                <div id="current_username" class="username"></div>
+                <div id="current_date" class="current_date"></div>
+            </div>
+        </div>
+        <div class="task_sectors">
+            <div class="created_task">
+                <div class="total_num number_of_task"></div>
+                <div class="sector_title">Created Tasks</div>
+            </div>
+            <div class="completed_task">
+                <div class="completed_num number_of_task"></div>
+                <div class="sector_title">Completed Tasks</div>
+            </div>
+        </div>
+        <button class="all_task_btn waves-effect waves-light" onclick="all_tasks(event)">All Tasks</button>
+        <div class="pagination_button" onclick="open_task_creator(event)">+</div>
+    </div>
+    <div class="add_task_area">
+        <div class="form_base">
+            <a href="" class="return_home" onclick="return_home(event)"><i class="fa fa-arrow-left"
+                                                                           aria-hidden="true"></i></a>
+
+            <div class="area_logo"><i class="fa fa-tasks" aria-hidden="true"></i></div>
+            <form class="add_task_form" action="" onsubmit="addTask(this,event)">
+                <div class="form-group">
+                    <input type="text" name="task_title" class="form-control" placeholder="Task Title"/>
+                </div>
+                <div class="form-group">
+                    <input type="date" name="task_date" class="form-control datepicker" placeholder="Select Date"/>
+                </div>
+                <button class="add_task_btn waves-effect waves-purple">Add Task</button>
+            </form>
+        </div>
+    </div>
+    <div class="task_list_area">
+        <div class="header">
+            <a href="" class="return_home" onclick="return_home(event)"><i class="fa fa-arrow-left"
+                                                                           aria-hidden="true"></i></a>
+            <a href="" class="add_task_hd_btn" onclick="open_task_creator(event)"><i class="fa fa-plus"
+                                                                                     aria-hidden="true"></i></a>
+
+            <form class="search_form" onsubmit="search(this, event)">
+                <div class="form-group">
+                    <input type="date" name="task_date" class="form-control datepicker" placeholder="Select Date"/>
+                </div>
+                <button class="search_submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+            </form>
+        </div>
+        <div class="task_list">
+
+        </div>
+    </div>
+    <div class="edit_task_area">
+        <div class="form_base">
+            <a href="" class="return_home" onclick="return_home(event)"><i class="fa fa-arrow-left"
+                                                                           aria-hidden="true"></i></a>
+
+            <div class="area_logo"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></div>
+            <form class="edit_task_form" action="" onsubmit="editTask(this,event)">
+                <div class="form-group">
+                    <input type="text" name="task_title" class="form-control" placeholder="Task Title"/>
+                </div>
+                <div class="form-group">
+                    <input type="date" name="task_date" class="form-control datepicker" placeholder="Select Date"/>
+                </div>
+                <input name="task_id" type="hidden" value=""/>
+                <button class="edit_task_btn waves-effect waves-purple">Update Task</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript" src="resources/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="resources/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="resources/js/picker.js"></script>
+<script type="text/javascript" src="resources/js/picker.date.js"></script>
+<script type="text/javascript" src="resources/js/waves.js"></script>
+<script type="text/javascript" src="system/functions/function.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.datepicker').pickadate({
+            selectMonths: true, // Creates a dropdown to control month
+            selectYears: 15 // Creates a dropdown of 15 years to control year
+        });
+
+    });
+</script>
+</body>
+</html>

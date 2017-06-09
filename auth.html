@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://use.fontawesome.com/208c7f3b93.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Abel|Raleway" rel="stylesheet">
+    <title>Task manager</title>
+    <link rel="stylesheet" href="resources/css/style.css" type="text/css"/>
+</head>
+<body>
+    <div class="main_body">
+        <div class="login_area active">
+            <div class="loginFm_base">
+                <div class="area_logo"><i class="fa fa-lock" aria-hidden="true"></i></div>
+                    <form class="login_form" action="" onsubmit="login(this, event)">
+                            <div class="form-group">
+                                <input type="text" name="username" class="form-control" placeholder="Username"/>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" name="password" class="form-control" placeholder="Password"/>
+                            </div>                            
+                        <button class="login_btn waves-effect waves-purple">Login</button>
+                    </form>
+                <a href="" class="openRegister" onclick="openRegister(event)">SIGN UP</a>
+            </div>
+        </div>
+        <div class="register_area">
+            <div class="registerFm_base">
+                <div class="area_logo"><i class="fa fa-user-plus" aria-hidden="true"></i></div>
+                    <form class="register_form" action="" onsubmit="register(this, event)">
+                        <div class="form-group">
+                            <input type="text" name="username" class="form-control" placeholder="Username"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" class="form-control" placeholder="Email"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" name="password" class="form-control" placeholder="Password"/>
+                        </div>
+                        <button class="register_btn waves-effect waves-purple">Sign up</button>
+                    </form>
+                <a href="" class="openlogin" onclick="openlogin(event)">Already Have an Account</a>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+<script type="text/javascript" src="resources/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="resources/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="resources/js/waves.js"></script>
+<script type="text/javascript" src="resources/js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="system/functions/auth.js"></script>
+
+<script type="text/javascript">
+function openRegister(event){
+    event.preventDefault();
+    $('.login_area').removeClass('active');
+    $('.register_area').addClass('active');
+}
+function openlogin(event){
+    event.preventDefault();
+    $('.register_area').removeClass('active');
+    $('.login_area').addClass('active');
+}
+</script>
+
+</body>
+</html>

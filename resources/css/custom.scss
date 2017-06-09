@@ -1,0 +1,479 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $theme-color;
+}
+
+.login_area, .register_area {
+  height: 100vh;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: $theme-color;
+  text-align: center;
+  display: none;
+  .active {
+    display: inline-block;
+  }
+}
+
+.login_area {
+  z-index: 1;
+  .loginFm_base {
+    width: 100%;
+    height: 100vh;
+    background-color: $theme-color;
+    .area_logo {
+      color: #fff;
+      font-size: 80px;
+      padding-top: 17vh;
+    }
+    .login_form {
+      margin-bottom: 35px;
+      margin-top: 30px;
+      padding: 0 15%;
+      input {
+        background-color: $theme-color;
+        color: #fff;
+        font-family: $font-2;
+        font-weight: bold;
+      }
+      .login_btn {
+        margin-top: 10%;
+        box-shadow: 0 1px 4px -1px #fff;
+        width: 160px;
+        height: 40px;
+        background-color: #fff;
+        color: $theme-color;
+        font-family: $font-2;
+        font-size: 18px;
+        font-weight: bold;
+        border: none;
+      }
+    }
+    .openRegister {
+      font-size: 15px;
+      font-weight: bold;
+      opacity: .7;
+      font-family: $font-1;
+      color: #fff;
+      text-decoration: none;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.register_area {
+  z-index: 1;
+  .registerFm_base {
+    width: 100%;
+    height: 100vh;
+    background-color: $theme-color;
+    .area_logo {
+      color: #fff;
+      font-size: 80px;
+      padding-top: 10vh;
+    }
+    .register_form {
+      margin-bottom: 35px;
+      margin-top: 30px;
+      padding: 0 15%;
+      input {
+        background-color: $theme-color;
+        color: #fff;
+        font-family: $font-2;
+        font-weight: bold;
+      }
+      .register_btn {
+        margin-top: 10%;
+        box-shadow: 0 1px 4px -1px #fff;
+        width: 160px;
+        height: 40px;
+        background-color: #fff;
+        color: $theme-color;
+        font-family: $font-2;
+        font-size: 18px;
+        font-weight: bold;
+        border: none;
+      }
+    }
+    .openlogin {
+      margin-top: 20px;
+      font-size: 15px;
+      font-weight: bold;
+      opacity: .7;
+      font-family: $font-1;
+      color: #fff;
+      text-decoration: none;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.main_body {
+  .welcome_area, .add_task_area, .task_list_area, .edit_task_area {
+    height: 100vh;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: #fff;
+    text-align: center;
+    display: none;
+  }
+  .active {
+    display: inline-block;
+  }
+}
+
+.welcome_area {
+  position: fixed;
+  z-index: 1;
+  .header {
+    width: 100%;
+    height: 40vh;
+    background-color: $theme-color;
+    position: relative;
+    .logout_btn {
+      position: absolute;
+      right: 10%;
+      top: 10%;
+      font-size: 20px;
+      color: #fff;
+    }
+    .welcome_note {
+      color: #fff;
+      text-align: left;
+      position: absolute;
+      left: 15%;
+      top: 40%;
+      .welcome_txt {
+        font-size: 27px;
+        font-family: $font-2;
+      }
+      .username {
+        font-size: 25px;
+        font-weight: 600;
+        font-family: $font-2;
+      }
+      .current_date {
+        font-size: 14px;
+        opacity: .6;
+        font-weight: 600;
+        font-family: $font-1;
+      }
+    }
+  }
+  .task_sectors {
+    width: 100%;
+    height: 100px;
+    position: relative;
+    .created_task {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 50%;
+      height: 100%;
+      .number_of_task {
+        position: absolute;
+        text-align: right;
+        padding: 20px 0 0 0;
+        font-size: 35px;
+        font-family: $font-2;
+        left: 0;
+        top: 0;
+        width: 40%;
+        height: 100%;
+      }
+      .sector_title {
+        text-align: left;
+        font-family: $font-1;
+        font-size: 15px;
+        padding-top: 25px;
+        position: absolute;
+        right: 5%;
+        top: 0;
+        width: 50%;
+        height: 100%;
+      }
+    }
+    .completed_task {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 50%;
+      height: 100%;
+      .number_of_task {
+        position: absolute;
+        text-align: right;
+        padding: 20px 20px 0 0;
+        font-size: 35px;
+        font-family: $font-2;
+        left: 0;
+        top: 0;
+        width: 40%;
+        height: 100%;
+      }
+      .sector_title {
+        text-align: left;
+        font-family: $font-1;
+        font-size: 15px;
+        padding-top: 30px;
+        position: absolute;
+        right: 2%;
+        top: 0;
+        width: 60%;
+        height: 100%;
+      }
+    }
+  }
+  .all_task_btn {
+    margin-top: 100px;
+    width: 200px;
+    height: 50px;
+    border: none;
+    background-color: $theme-color;
+    color: #fff;
+    font-family: $font-2;
+    font-size: 18px;
+    box-shadow: 0 1px 4px -1px $theme-color;
+  }
+  .pagination_button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: $theme-color;
+    width: 45px;
+    height: 40px;
+    font-size: 30px;
+    color: #fff;
+    border-top-left-radius: 20px;
+    cursor: pointer;
+  }
+}
+
+.add_task_area {
+  position: fixed;
+  z-index: 2;
+  .form_base {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: $theme-color;
+    .return_home {
+      position: absolute;
+      left: 30px;
+      top: 20px;
+      color: #fff;
+      font-size: 20px;
+    }
+    .area_logo {
+      color: #fff;
+      font-size: 80px;
+      padding-top: 17vh;
+    }
+    .add_task_form {
+      padding: 20px 15% 0 15%;
+      width: 100%;
+      height: 100%;
+      input {
+        background-color: $theme-color;
+        color: #fff;
+        font-family: $font-2;
+        font-weight: bold;
+      }
+      label {
+        color: rgba(255, 255, 255, 0.35);
+      }
+      .add_task_btn {
+        margin-top: 15%;
+        box-shadow: 0 1px 4px -1px #fff;
+        width: 160px;
+        height: 40px;
+        background-color: #fff;
+        color: $theme-color;
+        font-family: $font-2;
+        font-size: 18px;
+        border: none;
+      }
+    }
+  }
+}
+
+.task_list_area {
+  z-index: 3;
+  height: auto;
+  position: absolute;
+  .header {
+    width: 100%;
+    height: 60px;
+    background-color: $theme-color;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    .return_home {
+      position: absolute;
+      left: 30px;
+      top: 20px;
+      color: #fff;
+      font-size: 20px;
+    }
+    .add_task_hd_btn {
+      position: absolute;
+      left: 100px;
+      top: 21px;
+      color: #fff;
+      font-size: 20px;
+    }
+    .search_form {
+      position: absolute;
+      right: 20px;
+      top: 15px;
+      width: 40%;
+      input {
+        background-color: $theme-color;
+        color: #fff;
+        font-family: $font-2;
+        font-weight: bold;
+        &:focus {
+          outline: none;
+        }
+      }
+      .search_submit {
+        position: absolute;
+        right: 0;
+        top: 2px;
+        font-size: 20px;
+        color: #fff;
+        border: none;
+        background: none;
+      }
+    }
+  }
+  .task_list {
+    margin-top: 60px;
+    height: auto;
+    .task {
+      width: 100%;
+      height: 80px;
+      position: relative;
+      display: inline-block;
+      padding: 5px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.20);
+      .task_info {
+        width: 80%;
+        height: 80px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        .task_title {
+          margin: 10px 0 0 15px;
+          text-align: left;
+          font-family: $font-2;
+          font-size: 16px;
+
+        }
+        .task_date {
+          text-align: left;
+          margin: 10px 0 0 15px;
+          font-family: $font-2;
+          font-size: 12px;
+          font-weight: bold;
+          opacity: 0.6;
+        }
+        .task_edit_btn {
+          position: absolute;
+          right: 30px;
+          top: 18px;
+          color: $theme-color;
+          font-size: 20px;
+        }
+        .task_delete_btn {
+          position: absolute;
+          right: 0;
+          top: 18px;
+          color: $theme-color;
+          font-size: 20px;
+        }
+      }
+      .task_status {
+        width: 20%;
+        height: 80px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding-top: 20px;
+        .task_status_btn {
+          margin-top: 25px;
+          font-size: 20px;
+          color: $theme-color;
+        }
+        .complated {
+          pointer-events: none;
+          cursor: default;
+        }
+      }
+    }
+  }
+  .pagination_button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: $theme-color;
+    width: 45px;
+    height: 40px;
+    font-size: 30px;
+    color: #fff;
+    border-top-left-radius: 20px;
+  }
+}
+
+.edit_task_area {
+  z-index: 4;
+  position: fixed;
+  .form_base {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: $theme-color;
+    .return_home {
+      position: absolute;
+      left: 30px;
+      top: 20px;
+      color: #fff;
+      font-size: 20px;
+    }
+    .area_logo {
+      color: #fff;
+      font-size: 80px;
+      padding-top: 17vh;
+    }
+    .edit_task_form {
+      padding: 20px 15% 0 15%;
+      width: 100%;
+      height: 100%;
+      input {
+        background-color: $theme-color;
+        color: #fff;
+        font-family: $font-2;
+        font-weight: bold;
+      }
+      .edit_task_btn {
+        margin-top: 10%;
+        box-shadow: 0 1px 4px -1px #fff;
+        width: 160px;
+        height: 40px;
+        background-color: #fff;
+        color: $theme-color;
+        font-family: $font-2;
+        font-size: 18px;
+        border: none;
+      }
+    }
+  }
+}
+
